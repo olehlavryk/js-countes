@@ -8,7 +8,7 @@ Typical JavaScript counters for landing page.
   - CSS 3
   - JavaScript 
 
-# Easy to integrate in the project!
+# Easy to integrate!
 
   - Just use let deadline = '2021-01-01'; in to (index.js) to install counter dead line;
   - Just change CSS style if you need
