@@ -42,13 +42,16 @@ window.addEventListener('DOMContentLoaded', function() {
             secondsLabel.textContent = t.seconds > 1 ? 'Seconds:': 'Second:';
 
             // set values
-            days.textContent   = t.days;
-            hours.textContent   = t.hours;
-            minutes.textContent = t.minutes;
-            seconds.textContent = t.seconds;
+            days.textContent    = t.days < 10 ? '0' + t.days : t.days;
+            hours.textContent   = t.hours < 10 ? '0' + t.hours: t.hours;
+            minutes.textContent = t.minutes < 10 ? '0' + t.minutes : t.minutes;
+            seconds.textContent = t.seconds < 10 ? '0' + t.seconds : t.seconds;
 
             if(t.total <= 0) {
                 clearInterval(timeInterval);
+                hours.textContent   = '00';
+                minutes.textContent = '00';
+                seconds.textContent = '00';
             }
         }
     }
